@@ -1,0 +1,31 @@
+import java.awt.*;
+import java.awt.event.*;
+public class Apppp implements MouseListener{
+    Label lbloutput;
+    TextField txtOne;
+    TextField txtTwo;
+  Apppp()
+  {
+    Frame f=new Frame();
+    lbloutput = new Label();
+    lbloutput.setBounds(20,50,100,20);
+    txtOne=new TextField();
+    txtOne.setBounds(20,80,100,20);
+   txtTwo=new TextField(); 
+   txtTwo.setBounds(20,110,100,20)
+   f.addMouseListener(this);
+   f.add(lbloutput);
+   f.add(txtOne);
+   f.add(txtTwo);
+   f.setSize(300,300);
+   f.setLayout(null);
+  }  
+
+public void mousePressed(MouseEvent e)  {
+  int a=Integer.parseInt(txtOne.getText());
+  int b=Integer.parseInt(txtTwo.getText());
+  int c=a+b;
+  lbloutput.setText(String.valueOf(c));
+}
+
+}
